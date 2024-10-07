@@ -4,6 +4,7 @@ import "../CSS/Header.css";
 import { FaBars, FaSearch } from 'react-icons/fa';
 import Loader from './Loader';
 
+
 function Header() {
   const [isMenuActive, setIsMenuActive] = useState(false);
   const [isSearchVisible, setIsSearchVisible] = useState(false);
@@ -72,7 +73,7 @@ function Header() {
           id="section_1"
           className={`sticky top-0 z-50 transition-all duration-300 ease-in-out ${isScrolled ? 'bg-gray-200' : 'py-2 bg-white'}`}
         >
-          <div className="nav">
+          <div className="nav py-30">
             <div className="container mx-auto">
               <div className="flex justify-between items-center py-2 mr-4 ml-4">
                 {/* Logo */}
@@ -90,62 +91,34 @@ function Header() {
                 <div className="main_bar flex items-center">
                   <nav className="nav-con mr-5">
                     <ul
-                      className={`nav-links flex-col fixed bg-white w-full right-0 top-16 transition-transform duration-300 ease-in-out ${
-                        isMenuActive ? 'translate-x-0' : 'translate-x-full'
-                      } md:relative md:flex md:flex-row md:space-x-4 md:translate-x-0 md:top-0 md:bg-transparent`}
+                      className={`nav-links flex-col fixed bg-white w-full right-0 top-16 transition-transform duration-300 ease-in-out ${isMenuActive ? 'translate-x-0' : 'translate-x-full'
+                        } md:relative md:flex md:flex-row md:space-x-4 md:translate-x-0 md:top-0 md:bg-transparent`}
                     >
-                      {showLimitedLinks ? (
-                        <>
-                          <li>
-                            <NavLink to="/" activeClassName="text-blue-500" exact>
-                              Home
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/AboutUs" activeClassName="text-blue-500">
-                              About
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/Contact" activeClassName="text-blue-500">
-                              Contact
-                            </NavLink>
-                          </li>
-                        </>
-                      ) : (
-                        <>
-                          <li>
-                            <NavLink to="/" activeClassName="text-blue-500" exact>
-                              Home
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/AboutUs" activeClassName="text-blue-500">
-                              About
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/services" activeClassName="text-blue-500">
-                              Service
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/portfolio" activeClassName="text-blue-500">
-                              Portfolio
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/blog" activeClassName="text-blue-500">
-                              Blog
-                            </NavLink>
-                          </li>
-                          <li>
-                            <NavLink to="/Contact" activeClassName="text-blue-500">
-                              Contact
-                            </NavLink>
-                          </li>
-                        </>
-                      )}
+                      <li>
+                        <NavLink to="/" activeClassName="text-blue-500" exact>
+                          Home
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/AboutUs" activeClassName="text-blue-500">
+                          About
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/services" activeClassName="text-blue-500">
+                          Service
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/portfolio" activeClassName="text-blue-500">
+                          Portfolio
+                        </NavLink>
+                      </li>
+                      <li>
+                        <NavLink to="/Contact" activeClassName="text-blue-500">
+                          Contact
+                        </NavLink>
+                      </li>
                     </ul>
                   </nav>
 
@@ -154,12 +127,17 @@ function Header() {
                     <FaSearch className="mr-2 cursor-pointer" onClick={toggleSearch} />
                     <input
                       type="text"
-                      className={`search-f transition-all duration-100 ease-in-out absolute right-0 mt-3 transform ${
-                        isSearchVisible ? 'w-80 opacity-100' : 'w-0 opacity-0'
-                      } bg-gray-200 rounded-lg py-2 px-4 outline-none`}
+                      className={`search-f transition-all duration-100 ease-in-out absolute right-0 mt-3 transform ${isSearchVisible ? 'w-80 opacity-100' : 'w-0 opacity-0'
+                        } bg-gray-200 rounded-lg py-2 px-4 outline-none`}
                       placeholder="Search..."
                     />
                   </div>
+                </div>
+
+                <div>
+                  <NavLink to={"/Login"} className={"font-bold"}>
+                   Logout
+                  </NavLink>
                 </div>
 
                 {/* Hamburger Icon */}

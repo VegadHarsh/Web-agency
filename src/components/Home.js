@@ -10,19 +10,19 @@ import Animation from './Animation';
 
 const Home = () => {
     const [shadowStyle, setShadowStyle] = useState({
-        boxShadow: '-26px 26px 15px 5px rgba(92, 92, 92, 0.5)',
+        boxShadow: '0px 0px 18px 8px rgba(92, 92, 92, 0.5)',
     });
-
+    
     const handleMouseEnter = () => {
         setShadowStyle({
-            boxShadow: '-26px 26px 25px -5px rgba(92, 92, 92, 0.5)',
+            boxShadow: '0px 0px 18px 8px rgba(92, 92, 92, 0.5)',
             transition: "0.2s ease"
         });
     };
 
     const handleMouseLeave = () => {
         setShadowStyle({
-            boxShadow: '-26px 26px 15px 5px rgba(92, 92, 92, 0.5)',
+            boxShadow: '0px 0px 30px 12px rgba(92, 92, 92, 0.5)',
             transition: "0.2s ease"
         });
     };
@@ -63,20 +63,20 @@ const Home = () => {
         <>
             <section className="section_2 mb-5 animate-on-scroll">
                 <div id="main_part" className="flex flex-col md:flex-row w-full bg-[#f4f3f9]">
-                    <div className="main_det flex justify-center items-center w-full relative z-20 top-32 sm:z-0 sm:top-0 md:w-[50%]">
+                    <div className="main_det w-full md:w-[50%] flex justify-center items-center relative z-20 sm:relat custom:top-[100px] md:top-0">
                         <div className="text-content absolute inset-0 flex flex-col justify-center items-center p-4 text-center">
                             <p className="mb-3 text-sm md:text-base lg:text-lg">Experience Creative Freedom</p>
-                            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">We Are Big Digital Agency</h1>
+                            <h1 className="text-3xl w-[60%] md:text-4xl lg:text-5xl font-bold mb-6 custom:text-[20px]">We Are Big Digital Agency</h1>
                             <button className="bg-white border-none outline-none px-4 py-2 shadow-[0px_0px_50px_-14px_black] rounded-[7px]">
                                 <a href="#" className="text-black">Get In Touch</a>
                             </button>
                         </div>
                     </div>
-                    <div className="main_right_img relative overflow-hidden w-full md:w-[50%]">
+                    <div className="main_right_img  outline-none relative overflow-hidden w-full md:w-[50%]">
                         <img
                             src="./Assets/Imgs/Airplane.jpg"
                             alt="Airplane"
-                            className="w-full h-auto object-cover rounded-none md:rounded-[50%_0_0_50%/100%_0_0_100%] z-10"
+                            className="w-full outline-none h-auto object-cover rounded-none md:rounded-[50%_0_0_50%/100%_0_0_100%] z-10"
                         />
                     </div>
                 </div>
@@ -143,8 +143,8 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="container mx-auto my-14 pt-3 pb-3 animate-on-scroll-left">
-                        <div className="flex flex-col md:flex-row justify-around items-center">
+                    <div className="container mx-auto animate-on-scroll-left">
+                        <div className="flex flex-col md:flex-row justify-around my-10 pt-10 items-center">
                             <div className="md:w-5/12 mb-8 md:mb-0 flex justify-center">
                                 <img
                                     src="./Assets/Imgs/Aurora.jpg"
@@ -180,8 +180,8 @@ const Home = () => {
 
 
             {/* Section 4 */}
-            <section className="section_4 bg-[#E8CCCC] animate-on-scroll">
-                <div className="manage_project flex flex-col justify-center items-center h-auto md:h-[400px] p-4">
+            <section className="section_4 bg-[#E8CCCC] animate-on-scroll sm:my-6 md:my-10">
+                <div className="manage_project flex flex-col justify-center items-center h-auto md:h-[400px]  py-8">
                     <div className="manage_project_text text-center w-full md:w-[80%] lg:w-[70%]">
                         <h2 className="mb-4 font-bold text-[24px] sm:text-[28px] md:text-[30px]">
                             The ultimate way to manage all your project development resources and monitor task
@@ -223,7 +223,7 @@ const Home = () => {
                                         <span className={`absolute top-1 transform -translate-x-1/2 bg-white px-1 text-xs font-bold z-10 h-6`} style={{ left: `${item.percent}%` }}>
                                             {item.percent}%
                                         </span>
-                                        <div className={`h-1 bg-gradient-to-r from-red-600 to-gray-300 mx-auto`} style={{ width: `${item.percent}%` }}></div>
+                                        <div className={`h-1 bg-gradient-to-r from-red-600 to-gray-300 mx-auto w-full`}></div>
                                     </div>
                                 </div>
                             ))}
@@ -232,14 +232,13 @@ const Home = () => {
                 </div>
             </section>
 
-
             {/* Section 6 */}
-            <section className="section_6 my-28  animate-on-scroll-zoom" id="Our-Portfolio">
+            <section className="section_6 my-3 py-3 animate-on-scroll-zoom" id="Our-Portfolio">
                 {/* Section Header */}
                 <div className="main_port text-center mb-10">
                     <p className="text-red-500 mb-2">Our Portfolio</p>
                     <h1 className="text-2xl md:text-3xl font-bold leading-tight">
-                        Our Latest <br className="block md:hidden" /> <br /> Client Projects
+                        Our Latest Client Projects
                     </h1>
                 </div>
 
@@ -312,7 +311,7 @@ const Home = () => {
             </section>
 
             {/* Section 7*/}
-            <section className="w-full mx-auto max-w-6xl mb-8">
+            <section className="w-full mx-auto max-w-6xl my-5 py-5">
                 <div className="relative overflow-hidden group">
                     {/* Slides */}
                     <div className="w-full flex transition-transform duration-500" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
@@ -362,7 +361,7 @@ const Home = () => {
             </section>
 
             {/* Section 8 */}
-            <section className="section_8 animate-on-scroll-zoom">
+            <section className="section_8 animate-on-scroll-zoom my-10 py-8">
                 <div className="partners bg-[#F7F7F7] flex justify-center p-4">
                     <div className="set_logo flex justify-center mx-4">
                         <img src={`${process.env.PUBLIC_URL}/Assets/Imgs/download (1).png`} alt="Logo 1" className="h-auto w-32 md:w-48" />
@@ -381,18 +380,18 @@ const Home = () => {
 
             {/* Section 9*/}
             <div className="section_9 animate-on-scroll" id="Blog-Articles">
-                <div className="main_port mb-5 mt-5 text-center">
-                    <p className="text-lg">Articles</p>
+                <div className="main_port mb-5 mt-6 pt-4 text-center">
+                    <p className="text-lg text-red-500">Articles</p>
                     <h1 className="text-3xl font-bold">Latest Updates</h1>
                 </div>
 
-                <div className="container mx-auto">
+                <div className="container mx-auto my-5 pt-3 pb-10">
                     <div className="flex flex-wrap">
                         {/* Define a consistent height with 'h-full' for flex-grow */}
                         <div className="md:w-1/3 p-2 flex">
                             <div className="border flex flex-col w-full">
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/Airplane.jpg`}
+                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/larger_i2.jpg`}
                                     alt="Airplane"
                                     className="w-full h-48 object-cover" // Set a fixed height for the image
                                 />
@@ -406,7 +405,7 @@ const Home = () => {
                         <div className="md:w-1/3 p-2 flex">
                             <div className="border flex flex-col w-full">
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/Airplane.jpg`}
+                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/web-img-4.jpg`}
                                     alt="Airplane"
                                     className="w-full h-48 object-cover" // Set a fixed height for the image
                                 />
@@ -420,9 +419,9 @@ const Home = () => {
                         <div className="md:w-1/3 p-2 flex">
                             <div className="border flex flex-col w-full">
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/Airplane.jpg`}
+                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/28.jpg`}
                                     alt="Airplane"
-                                    className="w-full h-48 object-cover" // Set a fixed height for the image
+                                    className="w-full h-48 object-cover"
                                 />
                                 <div className="box_set_con p-4 flex-grow">
                                     <h3 className="font-bold text-xl">Boosting Your Marketing Team</h3>
@@ -435,18 +434,18 @@ const Home = () => {
                 </div>
 
                 <div className="section_10 mt-5 pt-4">
-                    <div className="sub_section">
-                        <div className="container mx-auto">
-                            <div className="flex flex-wrap">
-                                <div className="md:w-10/12 p-2">
+                    <div className="sub_section bg-red-500 p-1">
+                        <div className="container mx-auto ">
+                            <div className="flex flex-wrap justify-center">
+                                <div className="md:w-[40%] p-2">
                                     <input
                                         type="text"
-                                        className="w-full p-2 border border-gray-300 rounded"
+                                        className="w-full p-2 border outline-none border-gray-300 rounded"
                                         placeholder="Subscribe for newsletter"
                                     />
                                 </div>
-                                <div className="md:w-2/12 p-2 flex items-center">
-                                    <a href="#" className="text-center bg-[#fb5252] text-white p-2 rounded">Subscribe</a>
+                                <div className="md:w-2/8 p-2 flex items-center">
+                                    <a hrxef="#" className="text-center bg-[#ffff] text-black hover:text-red-400 hover:bg-black transition-all p-2 rounded">Subscribe</a>
                                 </div>
                             </div>
                         </div>
