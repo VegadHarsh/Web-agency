@@ -2,25 +2,15 @@ import React from 'react';
 import { Link } from "react-router-dom"
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import Animation from './Animation';
+import NavigationPath from "../pages/NavigationPath";
 
 
 const Contact = () => {
     return (
         <>
             <div>
-                <div class="naviget_path mb-4 px-20 py-4">
-                    <div class="row">
-                        <div class="nav-path d-flex">
-                            <Link to={"/"}>
-                                <button className="relative group">
-                                    <span className="relative z-10">Home</span>
-                                    <span className="absolute left-0 bottom-0 w-full h-1 bg-blue-500 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 ease-in-out" />
-                                </button>
-                                <span> / </span>
-                            </Link>
-                            <span class="d-flex" id="breadcrumb"></span>
-                        </div>
-                    </div>
+                <div class="naviget_path bg-white py-4 px-20">
+                    <NavigationPath />
                 </div>
                 <Animation />
                 <hr />
