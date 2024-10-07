@@ -59,7 +59,7 @@ const Login = () => {
                     Don't have an account? <Link to="/registration" className="text-blue-500 hover:underline">Register here</Link>
                 </p>
                 <p className="mt-2 text-center text-gray-600">
-                    <Link to="/forgot-password" className="text-blue-500 hover:underline">Forgot Password?</Link>
+                    <Link to="/forgetpassword" className="text-blue-500 hover:underline">Forgot Password?</Link>
                 </p>
             </div>
         </div>

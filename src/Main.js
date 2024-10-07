@@ -12,6 +12,7 @@ import UserList from './components/Admin-structure/UserList';
 import ProjectList from './components/Admin-structure/ProjectList';
 import Settings from './components/Admin-structure/Settings';
 import AdminPage from './components/Admin-structure/Adminpage';
+import Forgetpassword from "./pages/Forgetpassword"
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -25,6 +26,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path='/registration' element={<Registration />} />
       <Route path='/login' element={<Login />} />
+      <Route path='/forgetpassword' element={<Forgetpassword />} />
       <Route path='/adminpage' element={<AdminPage />} />
       <Route path="/userlist" element={<UserList />} />
       <Route path='/projectlist' element={<ProjectList />} />
