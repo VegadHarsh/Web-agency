@@ -54,9 +54,9 @@ const AdminPage = () => {
 
     return (
         <>
-            <div className='flex h-screen bg-gray-100'>
+            <div className='flex bg-gray-100'>
                 <Sidebar />
-                <div className="flex ml-64 flex-col p-6 bg-gray-100 h-screen w-full">
+                <div className="flex ml-64 flex-col p-6 bg-gray-100 h-full w-full">
                     <div className='flex justify-between'>
                         {/* Header */}
                         <h1 className="text-3xl font-bold text-gray-800 mb-6">Admin Dashboard</h1>
@@ -132,7 +132,7 @@ const AdminPage = () => {
                     <div className="bg-white shadow-lg rounded-lg p-4 mb-8">
                         <h2 className="text-xl font-semibold text-gray-700 mb-4">Project Status Overview</h2>
                         <div className="flex flex-col md:flex-row gap-4">
-                            <div className="bg-white shadow-lg rounded-lg p-4 w-full md:w-[50%]">
+                            <div className="rounded-lg p-4 w-full md:w-[50%]">
                                 <h3 className="text-lg font-semibold text-gray-700 mb-2">Project Breakdown</h3>
                                 <ul className="list-disc list-inside mb-5 text-gray-600">
                                     <li>Completed: {completedProjects}</li>

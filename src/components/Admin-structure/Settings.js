@@ -93,7 +93,6 @@ const Settings = () => {
                 <section className="mb-8">
                     <h4 className="text-lg font-semibold text-gray-700 mb-4">Change Password</h4>
                     <Link
-                        to="/change-password"
                         className="text-blue-600 hover:text-blue-800 transition duration-200"
                     >
                         Click here to change your password
