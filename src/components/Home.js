@@ -30,17 +30,17 @@ const Home = () => {
     const slides = [
         {
             id: 1,
-            image: `${process.env.PUBLIC_URL}/Assets/Imgs/Airplane.jpg`,
+            image: `${process.env.PUBLIC_URL}/Assets/Imgs/web-img-3.jpg`,
             text: "Duis non enim pharetra gravida arcu et, pretium sem ante dolor sit amet, elit ante urna et lorem quis, suscipit turpis nunc non odio at sed quam proin mattis nisi sit amet.",
         },
         {
             id: 2,
-            image: `${process.env.PUBLIC_URL}/Assets/Imgs/Airplane.jpg`,
+            image: `${process.env.PUBLIC_URL}/Assets/Imgs/28.jpg`,
             text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et ultricies erat. Nullam sit amet consequat elit.",
         },
         {
             id: 3,
-            image: `${process.env.PUBLIC_URL}/Assets/Imgs/Airplane.jpg`,
+            image: `${process.env.PUBLIC_URL}/Assets/Imgs/web-img-4.jpg`,
             text: "Suspendisse potenti. Fusce viverra dui non ligula lacinia, eget dapibus turpis tempor.",
         },
     ];
@@ -74,7 +74,7 @@ const Home = () => {
                     </div>
                     <div className="main_right_img  outline-none relative overflow-hidden w-full md:w-[50%]">
                         <img
-                            src="./Assets/Imgs/Airplane.jpg"
+                            src="./Assets/Imgs/office.jpg"
                             alt="Airplane"
                             className="w-full outline-none h-auto object-cover rounded-none md:rounded-[50%_0_0_50%/100%_0_0_100%] z-10"
                         />
@@ -147,9 +147,9 @@ const Home = () => {
                         <div className="flex flex-col md:flex-row justify-around my-10 pt-10 items-center">
                             <div className="md:w-5/12 mb-8 md:mb-0 flex justify-center">
                                 <img
-                                    src="./Assets/Imgs/Aurora.jpg"
+                                    src="./Assets/Imgs/istockphoto-1393093359-612x612.jpg"
                                     alt=""
-                                    className="w-full ease-in-out hover:scale-110"
+                                    className="w-full ease-in-out hover:scale-110 rounded-2xl"
                                     style={shadowStyle}
                                     onMouseEnter={handleMouseEnter}
                                     onMouseLeave={handleMouseLeave}
@@ -248,30 +248,30 @@ const Home = () => {
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Aurora.jpg"
+                                src="./Assets/Imgs/web-img-3.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Aurora.jpg"
+                                src="./Assets/Imgs/Digital-marketing.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Aurora.jpg"
+                                src="./Assets/Imgs/digital-marketing-agency-find-clients.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Aurora.jpg"
+                                src="./Assets/Imgs/digital11.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                     </div>
@@ -280,30 +280,30 @@ const Home = () => {
                     <div className="flex flex-wrap justify-center">
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Airplane.jpg"
+                                src="./Assets/Imgs/digital-marketing-2.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Airplane.jpg"
+                                src="./Assets/Imgs/digital-marketing-media-types.png"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Airplane.jpg"
+                                src="./Assets/Imgs/StockCake-Team+Strategy+Meeting_1710384274-640w.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                         <div className="w-full md:w-1/4">
                             <img
-                                src="./Assets/Imgs/Airplane.jpg"
+                                src="./Assets/Imgs/istockphoto-1492180527-612x612.jpg"
                                 alt="Project Image"
-                                className="w-full h-auto shadow-md"
+                                className="w-[90%] h-[80%] shadow-md"
                             />
                         </div>
                     </div>
@@ -320,7 +320,7 @@ const Home = () => {
                                 <img
                                     src={slide.image}
                                     alt={`Slide ${slide.id}`}
-                                    className="w-[20%] md:w-[30%] h-auto object-cover mb-4 md:mb-0"
+                                    className="w-[30%] md:w-[30%] h-auto object-cover mb-4 md:mb-0"
                                 />
                                 <div className="w-full md:w-1/2 p-4">
                                     <p className="text-sm md:text-base text-center md:text-left">
@@ -370,7 +370,7 @@ const Home = () => {
                         <img src={`${process.env.PUBLIC_URL}/Assets/Imgs/images (1).png`} alt="Logo 2" className="h-auto w-32 md:w-48" />
                     </div>
                     <div className="set_logo flex justify-center mx-4">
-                        <img src={`${process.env.PUBLIC_URL}/Assets/Imgs/images.png`} alt="Logo 3" className="h-auto w-32 md:w-48" />
+                        <img src={`${process.env.PUBLIC_URL}/Assets/Imgs/logo1.png`} alt="Logo 3" className="h-auto w-32 md:w-48 text-transparent" />
                     </div>
                     <div className="set_logo flex justify-center mx-4">
                         <img src={`${process.env.PUBLIC_URL}/Assets/Imgs/download.png`} alt="Logo 4" className="h-auto w-32 md:w-48" />
@@ -391,7 +391,7 @@ const Home = () => {
                         <div className="md:w-1/3 p-2 flex">
                             <div className="border flex flex-col w-full">
                                 <img
-                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/larger_i2.jpg`}
+                                    src={`${process.env.PUBLIC_URL}/Assets/Imgs/web-img-3.jpg`}
                                     alt="Airplane"
                                     className="w-full h-48 object-cover" // Set a fixed height for the image
                                 />
