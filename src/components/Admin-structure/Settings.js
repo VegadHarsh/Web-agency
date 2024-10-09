@@ -1,7 +1,7 @@
 // Settings.js
 import React from 'react';
 import Sidebar from '../Admin-structure/Sidebar';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import Loader from '../Loader';
 
 const Settings = () => {
@@ -12,7 +12,14 @@ const Settings = () => {
             <Sidebar />
             {/* Main Content */}
             <div className="flex-1 ml-64 p-8 bg-white shadow-lg rounded-lg">
-                <h3 className="text-2xl font-semibold text-gray-800 mb-6">Settings</h3>
+                <div className='flex justify-between items-center mb-4'>
+                    <h3 className="text-2xl font-semibold text-gray-800">Settings</h3>
+                    <NavLink to={"/login"}>
+                        <button className='bg-red-500 px-7 py-3 rounded-xl text-white transition-all hover:bg-red-600'>
+                            Logout
+                        </button>
+                    </NavLink>
+                </div>
                 <hr />
                 
                 {/* Profile Settings */}

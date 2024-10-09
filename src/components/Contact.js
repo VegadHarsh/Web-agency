@@ -1,28 +1,75 @@
-import React from 'react';
-import { Link } from "react-router-dom"
+import React, { useState } from 'react';
 import { FaFacebook, FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
 import Animation from './Animation';
 import NavigationPath from "../pages/NavigationPath";
-
+import emailjs from "emailjs-com";
+import { ErrorNotificationMsg, SuccessNotificationMsg } from '../pages/Notifications';
 
 const Contact = () => {
+    const initialState = {
+        name: '',
+        email: '',
+        text_message: ''
+    };
+
+    const [state, setState] = useState(initialState);
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setState(prevState => ({
+            ...prevState,
+            [name]: value
+        }));
+    };
+
+    const sendemail = async (e) => {
+        e.preventDefault();
+        const { name, email } = state;
+
+        // Check for required fields
+        if (!name || !email) {
+            ErrorNotificationMsg("All fields must be filled out");
+            return;
+        }
+
+        try {
+            const response = await emailjs.send(
+                "service_ayt7rys",
+                "template_2t7nona",
+                state,
+                "YJWsXs1Ht2p4T3Ov6"
+            );
+
+            if (response.status === 200) {
+                SuccessNotificationMsg("Message sent successfully!");
+                setState(initialState);
+            } else {
+                ErrorNotificationMsg("Something went wrong. Please try again.");
+            }
+        } catch (error) {
+            ErrorNotificationMsg("Error: Unable to send message.");
+            console.error("Email sending error:", error);
+        }
+    };
+
+
     return (
         <>
             <div>
-                <div class="naviget_path bg-white py-4 px-20">
+                <div className="naviget_path bg-white py-4 px-20">
                     <NavigationPath />
                 </div>
                 <Animation />
                 <hr />
                 {/* Contact Section */}
-                <section className="py-12 bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg shadow-xl animate-on-scroll">
+                <section className="py-12 bg-gradient-to-br from-gray-100 to-gray-50 animate-on-scroll">
                     <div className="container mx-auto">
                         <div className="mb-6 text-center mt-10">
                             <h2 className="text-4xl font-bold text-gray-700">Get in Touch</h2>
                         </div>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                             {/* Contact Info */}
-                            <div className="bg-gradient-to-r p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                            <div className="bg-white p-6 rounded-lg shadow-lg ">
                                 <h4 className="text-2xl font-bold text-blue-400 mb-2 animate-on-scroll-right">We Are Happy to Hear from You</h4>
                                 <p className="text-gray-700 mb-4 animate-on-scroll-right">
                                     Hello, we are always here to help you anytime. Just fill out the inquiry form or use the contact details.
@@ -73,19 +120,20 @@ const Contact = () => {
                                 </div>
                             </div>
 
-
                             {/* Contact Form */}
-                            <div className="bg-gradient-to-r p-8 rounded-lg shadow-lg transition-transform transform hover:scale-105">
+                            <div className="bg-white p-8 rounded-lg shadow-lg">
                                 <h4 className="text-2xl font-bold text-blue-400 mb-4 text-center animate-on-scroll-left">Contact Us</h4>
-                                <form className="space-y-6">
+                                <form className="space-y-6" onSubmit={sendemail}>
                                     <div>
                                         <label htmlFor="name" className="block text-gray-800 font-semibold animate-on-scroll-left">Full Name</label>
                                         <input
                                             type="text"
                                             id="name"
+                                            name="name"
+                                            value={state.name}
+                                            onChange={handleChange}
                                             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all animate-on-scroll-left"
                                             placeholder="Enter your name"
-                                            required
                                         />
                                     </div>
                                     <div>
@@ -93,9 +141,11 @@ const Contact = () => {
                                         <input
                                             type="email"
                                             id="email"
+                                            name="email"
+                                            value={state.email}
+                                            onChange={handleChange}
                                             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all animate-on-scroll-left"
                                             placeholder="Enter your email"
-                                            required
                                         />
                                     </div>
                                     <div>
@@ -103,20 +153,21 @@ const Contact = () => {
                                         <textarea
                                             id="message"
                                             rows="5"
+                                            name="text_message"
+                                            value={state.text_message}
+                                            onChange={handleChange}
                                             className="w-full border border-gray-300 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-all animate-on-scroll-left"
                                             placeholder="Type your message here"
-                                            required
                                         ></textarea>
                                     </div>
                                     <button
                                         type="submit"
-                                        className="w-full bg-blue-500 text-white px-6 py-3 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 animate-on-scroll-left"
+                                        className="w-full text-center bg-blue-500 text-white px-6 py-2 rounded-lg shadow-md hover:bg-blue-600 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-400 animate-on-scroll-left"
                                     >
-                                        Send Message
+                                        Send message
                                     </button>
                                 </form>
                             </div>
-
                         </div>
                     </div>
                 </section>
