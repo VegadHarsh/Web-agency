@@ -46,14 +46,14 @@ const Login = () => {
                             className="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
                         />
                     </div>
-                    <button
-                        type="submit"
-                        className="w-full mt-6 px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
-                    >
-                        <NavLink to={"/Adminpage"}>
+                    <NavLink to={"/Adminpage"}>
+                        <button
+                            type="submit"
+                            className="w-full mt-6 px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400"
+                        >
                             Login
-                        </NavLink>
-                    </button>
+                        </button>
+                    </NavLink>
                 </form>
                 <p className="mt-4 text-center text-gray-600">
                     Don't have an account? <Link to="/registration" className="text-blue-500 hover:underline">Register here</Link>
